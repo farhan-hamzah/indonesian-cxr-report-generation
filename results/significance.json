@@ -1,0 +1,1028 @@
+{
+ "A": "medgemma_full",
+ "B": "chexone_full",
+ "indonesian": {
+  "test_chexpert/findings": {
+   "bleu2_rexrank": {
+    "A": 0.1595,
+    "B": 0.1734,
+    "B_minus_A": 0.0138,
+    "ci95": [
+     -0.0042,
+     0.0314
+    ],
+    "significant": false
+   },
+   "rouge_l": {
+    "A": 0.2301,
+    "B": 0.2328,
+    "B_minus_A": 0.0028,
+    "ci95": [
+     -0.01,
+     0.0153
+    ],
+    "significant": false
+   },
+   "meteor": {
+    "A": 0.2142,
+    "B": 0.2207,
+    "B_minus_A": 0.0065,
+    "ci95": [
+     -0.012,
+     0.0248
+    ],
+    "significant": false
+   },
+   "bleu_4": {
+    "A": 0.0767,
+    "B": 0.0907,
+    "B_minus_A": 0.014,
+    "ci95": [
+     0.0012,
+     0.0272
+    ],
+    "significant": true
+   }
+  },
+  "test_chexpert/impression": {
+   "bleu2_rexrank": {
+    "A": 0.1868,
+    "B": 0.1877,
+    "B_minus_A": 0.0009,
+    "ci95": [
+     -0.009,
+     0.0108
+    ],
+    "significant": false
+   },
+   "rouge_l": {
+    "A": 0.2414,
+    "B": 0.2449,
+    "B_minus_A": 0.0035,
+    "ci95": [
+     -0.0072,
+     0.014
+    ],
+    "significant": false
+   },
+   "meteor": {
+    "A": 0.1973,
+    "B": 0.2144,
+    "B_minus_A": 0.0171,
+    "ci95": [
+     0.005,
+     0.0289
+    ],
+    "significant": true
+   },
+   "bleu_4": {
+    "A": 0.0854,
+    "B": 0.0967,
+    "B_minus_A": 0.0113,
+    "ci95": [
+     0.002,
+     0.0201
+    ],
+    "significant": true
+   }
+  },
+  "test_mimic/findings": {
+   "bleu2_rexrank": {
+    "A": 0.1343,
+    "B": 0.1514,
+    "B_minus_A": 0.0171,
+    "ci95": [
+     0.0137,
+     0.0205
+    ],
+    "significant": true
+   },
+   "rouge_l": {
+    "A": 0.201,
+    "B": 0.2158,
+    "B_minus_A": 0.0148,
+    "ci95": [
+     0.0117,
+     0.0178
+    ],
+    "significant": true
+   },
+   "meteor": {
+    "A": 0.176,
+    "B": 0.189,
+    "B_minus_A": 0.013,
+    "ci95": [
+     0.0097,
+     0.0163
+    ],
+    "significant": true
+   },
+   "bleu_4": {
+    "A": 0.0625,
+    "B": 0.0663,
+    "B_minus_A": 0.0038,
+    "ci95": [
+     0.0005,
+     0.0063
+    ],
+    "significant": true
+   }
+  },
+  "test_mimic/impression": {
+   "bleu2_rexrank": {
+    "A": 0.1241,
+    "B": 0.1298,
+    "B_minus_A": 0.0058,
+    "ci95": [
+     0.0012,
+     0.0105
+    ],
+    "significant": true
+   },
+   "rouge_l": {
+    "A": 0.2189,
+    "B": 0.2301,
+    "B_minus_A": 0.0112,
+    "ci95": [
+     0.0067,
+     0.0159
+    ],
+    "significant": true
+   },
+   "meteor": {
+    "A": 0.1881,
+    "B": 0.1916,
+    "B_minus_A": 0.0035,
+    "ci95": [
+     -0.0012,
+     0.0084
+    ],
+    "significant": false
+   },
+   "bleu_4": {
+    "A": 0.0562,
+    "B": 0.0575,
+    "B_minus_A": 0.0013,
+    "ci95": [
+     -0.0008,
+     0.0034
+    ],
+    "significant": false
+   }
+  },
+  "test_openi/findings": {
+   "bleu2_rexrank": {
+    "A": 0.184,
+    "B": 0.1654,
+    "B_minus_A": -0.0186,
+    "ci95": [
+     -0.0213,
+     -0.0158
+    ],
+    "significant": true
+   },
+   "rouge_l": {
+    "A": 0.2323,
+    "B": 0.2209,
+    "B_minus_A": -0.0114,
+    "ci95": [
+     -0.014,
+     -0.0089
+    ],
+    "significant": true
+   },
+   "meteor": {
+    "A": 0.2437,
+    "B": 0.2401,
+    "B_minus_A": -0.0036,
+    "ci95": [
+     -0.0063,
+     -0.0007
+    ],
+    "significant": true
+   },
+   "bleu_4": {
+    "A": 0.0748,
+    "B": 0.0598,
+    "B_minus_A": -0.015,
+    "ci95": [
+     -0.0168,
+     -0.0131
+    ],
+    "significant": true
+   }
+  },
+  "test_openi/impression": {
+   "bleu2_rexrank": {
+    "A": 0.1878,
+    "B": 0.1785,
+    "B_minus_A": -0.0093,
+    "ci95": [
+     -0.0128,
+     -0.0058
+    ],
+    "significant": true
+   },
+   "rouge_l": {
+    "A": 0.3496,
+    "B": 0.3401,
+    "B_minus_A": -0.0095,
+    "ci95": [
+     -0.0131,
+     -0.0059
+    ],
+    "significant": true
+   },
+   "meteor": {
+    "A": 0.2595,
+    "B": 0.2534,
+    "B_minus_A": -0.0061,
+    "ci95": [
+     -0.0096,
+     -0.0025
+    ],
+    "significant": true
+   },
+   "bleu_4": {
+    "A": 0.1191,
+    "B": 0.1172,
+    "B_minus_A": -0.0019,
+    "ci95": [
+     -0.0039,
+     0.0002
+    ],
+    "significant": false
+   }
+  }
+ },
+ "rexrank": {
+  "test_chexpert/findings": {
+   "radgraph": {
+    "A": 0.2362,
+    "B": 0.2282,
+    "B_minus_A": -0.0081,
+    "ci95": [
+     -0.0335,
+     0.0147
+    ],
+    "significant": false
+   },
+   "ratescore": {
+    "A": 0.5405,
+    "B": 0.5454,
+    "B_minus_A": 0.0049,
+    "ci95": [
+     -0.0184,
+     0.0267
+    ],
+    "significant": false
+   },
+   "semb_score": {
+    "A": 0.3915,
+    "B": 0.3985,
+    "B_minus_A": 0.007,
+    "ci95": [
+     -0.0387,
+     0.0527
+    ],
+    "significant": false
+   },
+   "bleu2": {
+    "A": 0.1413,
+    "B": 0.1528,
+    "B_minus_A": 0.0114,
+    "ci95": [
+     -0.0091,
+     0.0299
+    ],
+    "significant": false
+   },
+   "bertscore": {
+    "A": 0.2424,
+    "B": 0.2528,
+    "B_minus_A": 0.0103,
+    "ci95": [
+     -0.0094,
+     0.029
+    ],
+    "significant": false
+   },
+   "radcliq_v1": {
+    "A": 1.3663,
+    "B": 1.3522,
+    "B_minus_A": -0.014,
+    "ci95": [
+     -0.0906,
+     0.0646
+    ],
+    "significant": false
+   },
+   "1/radcliq": {
+    "A": 0.7319,
+    "B": 0.7395,
+    "B_minus_A": 0.0076,
+    "ci95": [
+     -0.0342,
+     0.0513
+    ],
+    "significant": false
+   },
+   "green": {
+    "A": 0.2718,
+    "B": 0.305,
+    "B_minus_A": 0.0333,
+    "ci95": [
+     -0.0027,
+     0.0717
+    ],
+    "significant": false
+   },
+   "crimson": {
+    "A": 0.1799,
+    "B": 0.2193,
+    "B_minus_A": 0.0394,
+    "ci95": [
+     -0.0569,
+     0.1304
+    ],
+    "significant": false
+   }
+  },
+  "test_chexpert/impression": {
+   "radgraph": {
+    "A": 0.2058,
+    "B": 0.2327,
+    "B_minus_A": 0.0269,
+    "ci95": [
+     0.0087,
+     0.0445
+    ],
+    "significant": true
+   },
+   "ratescore": {
+    "A": 0.5143,
+    "B": 0.5391,
+    "B_minus_A": 0.0247,
+    "ci95": [
+     0.0092,
+     0.0395
+    ],
+    "significant": true
+   },
+   "semb_score": {
+    "A": 0.3945,
+    "B": 0.4349,
+    "B_minus_A": 0.0403,
+    "ci95": [
+     0.0085,
+     0.0726
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.1722,
+    "B": 0.1758,
+    "B_minus_A": 0.0036,
+    "ci95": [
+     -0.0082,
+     0.0153
+    ],
+    "significant": false
+   },
+   "bertscore": {
+    "A": 0.2717,
+    "B": 0.2764,
+    "B_minus_A": 0.0047,
+    "ci95": [
+     -0.0082,
+     0.0177
+    ],
+    "significant": false
+   },
+   "radcliq_v1": {
+    "A": 1.3529,
+    "B": 1.2715,
+    "B_minus_A": -0.0814,
+    "ci95": [
+     -0.1417,
+     -0.0206
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.7391,
+    "B": 0.7865,
+    "B_minus_A": 0.0473,
+    "ci95": [
+     0.012,
+     0.084
+    ],
+    "significant": true
+   }
+  },
+  "test_chexpert/findings_impression": {
+   "radgraph": {
+    "A": 0.2558,
+    "B": 0.2555,
+    "B_minus_A": -0.0003,
+    "ci95": [
+     -0.0247,
+     0.0226
+    ],
+    "significant": false
+   },
+   "ratescore": {
+    "A": 0.581,
+    "B": 0.591,
+    "B_minus_A": 0.01,
+    "ci95": [
+     -0.0088,
+     0.0289
+    ],
+    "significant": false
+   },
+   "semb_score": {
+    "A": 0.4054,
+    "B": 0.4103,
+    "B_minus_A": 0.0049,
+    "ci95": [
+     -0.0383,
+     0.0487
+    ],
+    "significant": false
+   },
+   "bleu2": {
+    "A": 0.179,
+    "B": 0.1897,
+    "B_minus_A": 0.0107,
+    "ci95": [
+     -0.0053,
+     0.0267
+    ],
+    "significant": false
+   },
+   "bertscore": {
+    "A": 0.1963,
+    "B": 0.1898,
+    "B_minus_A": -0.0064,
+    "ci95": [
+     -0.0243,
+     0.0132
+    ],
+    "significant": false
+   },
+   "radcliq_v1": {
+    "A": 1.4043,
+    "B": 1.4104,
+    "B_minus_A": 0.0061,
+    "ci95": [
+     -0.0765,
+     0.0883
+    ],
+    "significant": false
+   },
+   "1/radcliq": {
+    "A": 0.7121,
+    "B": 0.709,
+    "B_minus_A": -0.0031,
+    "ci95": [
+     -0.0436,
+     0.042
+    ],
+    "significant": false
+   },
+   "green": {
+    "A": 0.2948,
+    "B": 0.3219,
+    "B_minus_A": 0.0271,
+    "ci95": [
+     -0.016,
+     0.0699
+    ],
+    "significant": false
+   },
+   "crimson": {
+    "A": 0.1469,
+    "B": 0.1727,
+    "B_minus_A": 0.0258,
+    "ci95": [
+     -0.0704,
+     0.1261
+    ],
+    "significant": false
+   }
+  },
+  "test_mimic/findings": {
+   "radgraph": {
+    "A": 0.1336,
+    "B": 0.1647,
+    "B_minus_A": 0.0311,
+    "ci95": [
+     0.026,
+     0.0364
+    ],
+    "significant": true
+   },
+   "ratescore": {
+    "A": 0.5222,
+    "B": 0.5202,
+    "B_minus_A": -0.002,
+    "ci95": [
+     -0.0059,
+     0.0021
+    ],
+    "significant": false
+   },
+   "semb_score": {
+    "A": 0.2904,
+    "B": 0.3565,
+    "B_minus_A": 0.0661,
+    "ci95": [
+     0.0549,
+     0.0776
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.113,
+    "B": 0.1308,
+    "B_minus_A": 0.0179,
+    "ci95": [
+     0.0139,
+     0.0221
+    ],
+    "significant": true
+   },
+   "bertscore": {
+    "A": 0.1488,
+    "B": 0.188,
+    "B_minus_A": 0.0391,
+    "ci95": [
+     0.0338,
+     0.0444
+    ],
+    "significant": true
+   },
+   "radcliq_v1": {
+    "A": 1.7492,
+    "B": 1.5801,
+    "B_minus_A": -0.1691,
+    "ci95": [
+     -0.1916,
+     -0.1477
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.5717,
+    "B": 0.6329,
+    "B_minus_A": 0.0612,
+    "ci95": [
+     0.0532,
+     0.0689
+    ],
+    "significant": true
+   },
+   "green": {
+    "A": 0.2304,
+    "B": 0.2567,
+    "B_minus_A": 0.0263,
+    "ci95": [
+     0.0095,
+     0.0429
+    ],
+    "significant": true
+   },
+   "crimson": {
+    "A": -0.0081,
+    "B": 0.0277,
+    "B_minus_A": 0.0358,
+    "ci95": [
+     -0.0014,
+     0.0758
+    ],
+    "significant": false
+   }
+  },
+  "test_mimic/impression": {
+   "radgraph": {
+    "A": 0.1356,
+    "B": 0.1433,
+    "B_minus_A": 0.0076,
+    "ci95": [
+     0.0018,
+     0.0136
+    ],
+    "significant": true
+   },
+   "ratescore": {
+    "A": 0.4225,
+    "B": 0.4287,
+    "B_minus_A": 0.0062,
+    "ci95": [
+     0.0004,
+     0.0122
+    ],
+    "significant": true
+   },
+   "semb_score": {
+    "A": 0.4058,
+    "B": 0.4237,
+    "B_minus_A": 0.018,
+    "ci95": [
+     0.0086,
+     0.0283
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.0687,
+    "B": 0.07,
+    "B_minus_A": 0.0013,
+    "ci95": [
+     -0.0028,
+     0.0051
+    ],
+    "significant": false
+   },
+   "bertscore": {
+    "A": 0.195,
+    "B": 0.2005,
+    "B_minus_A": 0.0055,
+    "ci95": [
+     0.0005,
+     0.0104
+    ],
+    "significant": true
+   },
+   "radcliq_v1": {
+    "A": 1.5556,
+    "B": 1.5193,
+    "B_minus_A": -0.0364,
+    "ci95": [
+     -0.0566,
+     -0.0157
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.6428,
+    "B": 0.6582,
+    "B_minus_A": 0.0154,
+    "ci95": [
+     0.0068,
+     0.0235
+    ],
+    "significant": true
+   }
+  },
+  "test_mimic/findings_impression": {
+   "radgraph": {
+    "A": 0.1864,
+    "B": 0.2017,
+    "B_minus_A": 0.0152,
+    "ci95": [
+     0.0101,
+     0.0205
+    ],
+    "significant": true
+   },
+   "ratescore": {
+    "A": 0.5552,
+    "B": 0.5698,
+    "B_minus_A": 0.0146,
+    "ci95": [
+     0.01,
+     0.0194
+    ],
+    "significant": true
+   },
+   "semb_score": {
+    "A": 0.3397,
+    "B": 0.3768,
+    "B_minus_A": 0.0371,
+    "ci95": [
+     0.0252,
+     0.0492
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.1537,
+    "B": 0.1654,
+    "B_minus_A": 0.0117,
+    "ci95": [
+     0.0077,
+     0.0159
+    ],
+    "significant": true
+   },
+   "bertscore": {
+    "A": 0.1473,
+    "B": 0.1579,
+    "B_minus_A": 0.0106,
+    "ci95": [
+     0.0058,
+     0.0152
+    ],
+    "significant": true
+   },
+   "radcliq_v1": {
+    "A": 1.6369,
+    "B": 1.5635,
+    "B_minus_A": -0.0734,
+    "ci95": [
+     -0.0941,
+     -0.0532
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.6109,
+    "B": 0.6396,
+    "B_minus_A": 0.0287,
+    "ci95": [
+     0.0204,
+     0.037
+    ],
+    "significant": true
+   },
+   "green": {
+    "A": 0.283,
+    "B": 0.3068,
+    "B_minus_A": 0.0237,
+    "ci95": [
+     0.0082,
+     0.0397
+    ],
+    "significant": true
+   },
+   "crimson": {
+    "A": -0.0732,
+    "B": -0.0275,
+    "B_minus_A": 0.0457,
+    "ci95": [
+     0.0077,
+     0.0837
+    ],
+    "significant": true
+   }
+  },
+  "test_openi/findings": {
+   "radgraph": {
+    "A": 0.2139,
+    "B": 0.1967,
+    "B_minus_A": -0.0173,
+    "ci95": [
+     -0.0218,
+     -0.0128
+    ],
+    "significant": true
+   },
+   "ratescore": {
+    "A": 0.5952,
+    "B": 0.587,
+    "B_minus_A": -0.0081,
+    "ci95": [
+     -0.0125,
+     -0.004
+    ],
+    "significant": true
+   },
+   "semb_score": {
+    "A": 0.4969,
+    "B": 0.4643,
+    "B_minus_A": -0.0326,
+    "ci95": [
+     -0.0404,
+     -0.0252
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.1472,
+    "B": 0.1412,
+    "B_minus_A": -0.006,
+    "ci95": [
+     -0.009,
+     -0.0028
+    ],
+    "significant": true
+   },
+   "bertscore": {
+    "A": 0.2279,
+    "B": 0.2202,
+    "B_minus_A": -0.0077,
+    "ci95": [
+     -0.0116,
+     -0.0038
+    ],
+    "significant": true
+   },
+   "radcliq_v1": {
+    "A": 1.3132,
+    "B": 1.3799,
+    "B_minus_A": 0.0666,
+    "ci95": [
+     0.0518,
+     0.0808
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.7615,
+    "B": 0.7247,
+    "B_minus_A": -0.0368,
+    "ci95": [
+     -0.0447,
+     -0.0286
+    ],
+    "significant": true
+   },
+   "green": {
+    "A": 0.5938,
+    "B": 0.5402,
+    "B_minus_A": -0.0536,
+    "ci95": [
+     -0.0781,
+     -0.0292
+    ],
+    "significant": true
+   },
+   "crimson": {
+    "A": 0.2975,
+    "B": 0.2051,
+    "B_minus_A": -0.0924,
+    "ci95": [
+     -0.1422,
+     -0.0385
+    ],
+    "significant": true
+   }
+  },
+  "test_openi/impression": {
+   "radgraph": {
+    "A": 0.1216,
+    "B": 0.119,
+    "B_minus_A": -0.0026,
+    "ci95": [
+     -0.0057,
+     0.0005
+    ],
+    "significant": false
+   },
+   "ratescore": {
+    "A": 0.4397,
+    "B": 0.442,
+    "B_minus_A": 0.0023,
+    "ci95": [
+     -0.0017,
+     0.0063
+    ],
+    "significant": false
+   },
+   "semb_score": {
+    "A": 0.6793,
+    "B": 0.6554,
+    "B_minus_A": -0.0239,
+    "ci95": [
+     -0.0303,
+     -0.0176
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.1048,
+    "B": 0.1016,
+    "B_minus_A": -0.0032,
+    "ci95": [
+     -0.0058,
+     -0.0005
+    ],
+    "significant": true
+   },
+   "bertscore": {
+    "A": 0.213,
+    "B": 0.2103,
+    "B_minus_A": -0.0026,
+    "ci95": [
+     -0.0055,
+     0.0003
+    ],
+    "significant": false
+   },
+   "radcliq_v1": {
+    "A": 1.2714,
+    "B": 1.3027,
+    "B_minus_A": 0.0313,
+    "ci95": [
+     0.0195,
+     0.0435
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.7865,
+    "B": 0.7676,
+    "B_minus_A": -0.0189,
+    "ci95": [
+     -0.0255,
+     -0.012
+    ],
+    "significant": true
+   }
+  },
+  "test_openi/findings_impression": {
+   "radgraph": {
+    "A": 0.2214,
+    "B": 0.2072,
+    "B_minus_A": -0.0142,
+    "ci95": [
+     -0.0179,
+     -0.0106
+    ],
+    "significant": true
+   },
+   "ratescore": {
+    "A": 0.6195,
+    "B": 0.6155,
+    "B_minus_A": -0.004,
+    "ci95": [
+     -0.0073,
+     -0.0006
+    ],
+    "significant": true
+   },
+   "semb_score": {
+    "A": 0.4879,
+    "B": 0.4539,
+    "B_minus_A": -0.034,
+    "ci95": [
+     -0.0415,
+     -0.027
+    ],
+    "significant": true
+   },
+   "bleu2": {
+    "A": 0.1747,
+    "B": 0.1681,
+    "B_minus_A": -0.0066,
+    "ci95": [
+     -0.0095,
+     -0.0037
+    ],
+    "significant": true
+   },
+   "bertscore": {
+    "A": 0.2093,
+    "B": 0.1974,
+    "B_minus_A": -0.0119,
+    "ci95": [
+     -0.0157,
+     -0.0082
+    ],
+    "significant": true
+   },
+   "radcliq_v1": {
+    "A": 1.3436,
+    "B": 1.4147,
+    "B_minus_A": 0.0711,
+    "ci95": [
+     0.0578,
+     0.085
+    ],
+    "significant": true
+   },
+   "1/radcliq": {
+    "A": 0.7443,
+    "B": 0.7069,
+    "B_minus_A": -0.0374,
+    "ci95": [
+     -0.0447,
+     -0.0299
+    ],
+    "significant": true
+   },
+   "green": {
+    "A": 0.575,
+    "B": 0.5436,
+    "B_minus_A": -0.0314,
+    "ci95": [
+     -0.0526,
+     -0.0099
+    ],
+    "significant": true
+   },
+   "crimson": {
+    "A": 0.2756,
+    "B": 0.2163,
+    "B_minus_A": -0.0592,
+    "ci95": [
+     -0.1107,
+     -0.0078
+    ],
+    "significant": true
+   }
+  }
+ }
+}

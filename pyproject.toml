@@ -1,0 +1,30 @@
+[project]
+name = "rrg-indo"
+version = "0.1.0"
+description = "Indonesian CXR report generation - VLMs (MedGemma, CheXOne) fine-tuned with Unsloth (QLoRA)"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch==2.11.0",
+    "torchvision==0.26.0",
+    # pinned to releases >= 2 weeks old; bump together (unsloth_zoo must match unsloth's era)
+    "unsloth==2026.9.11",
+    "unsloth_zoo==2026.9.7",
+    "triton-windows>=3.7,<3.8; sys_platform == 'win32'",
+    "pandas>=2.2",
+    "pyarrow>=17",
+    "pillow>=10",
+    "scikit-learn>=1.5",
+    "sacrebleu>=2.4",
+    "rouge-score>=0.1.2",
+    "nltk>=3.9",
+    "bert-score>=0.3.13",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }

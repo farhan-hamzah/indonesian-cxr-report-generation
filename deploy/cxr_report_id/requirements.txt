@@ -1,0 +1,19 @@
+# Python 3.11 or 3.12. Versions below are the ones the models were trained and tested with.
+#
+# 1) PyTorch first, built for your GPU / CUDA (https://pytorch.org/get-started/locally/), e.g.
+#      pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
+#    (cu128 = CUDA 12.8, needed for RTX 50xx; older GPUs can use cu126 etc.; CPU-only: .../whl/cpu)
+# 2) then: pip install -r requirements.txt
+torch==2.11.0
+torchvision==0.26.0          # the image/video processors of both models use it
+transformers==5.5.0          # MedGemma (Gemma 3) and CheXOne (Qwen2.5-VL) are both built in
+peft==0.21.2
+accelerate==1.15.0
+bitsandbytes==0.50.2         # 4-bit loading on NVIDIA GPUs (default on GPU); unused on CPU
+pillow>=10
+numpy
+
+# Only for serve_example.py (HTTP API):
+# fastapi==0.115.12
+# uvicorn==0.34.2
+# python-multipart==0.0.20

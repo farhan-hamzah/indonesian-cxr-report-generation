@@ -1,0 +1,1232 @@
+{
+ "source": "https://rexrank.ai (snapshot 2026-10-16), findings track, study level",
+ "test_sets": {
+  "test_chexpert": {
+   "leaderboard": [
+    {
+     "name": "CheXagent Stanford",
+     "CRIMSON": 0.102,
+     "1/RadCliQ-v1": 0.638,
+     "BLEU": 0.125,
+     "BertScore": 0.276,
+     "SembScore": 0.272,
+     "RadGraph": 0.125,
+     "RaTEScore": 0.434,
+     "GREEN": 0.183
+    },
+    {
+     "name": "CheXpertPlus-MIMIC Stanford",
+     "CRIMSON": 0.1,
+     "1/RadCliQ-v1": 0.679,
+     "BLEU": 0.147,
+     "BertScore": 0.302,
+     "SembScore": 0.298,
+     "RadGraph": 0.145,
+     "RaTEScore": 0.43,
+     "GREEN": 0.238
+    },
+    {
+     "name": "CheXpertPlus-CheX Stanford",
+     "CRIMSON": 0.117,
+     "1/RadCliQ-v1": 0.807,
+     "BLEU": 0.159,
+     "BertScore": 0.351,
+     "SembScore": 0.379,
+     "RadGraph": 0.204,
+     "RaTEScore": 0.487,
+     "GREEN": 0.237
+    },
+    {
+     "name": "CheXpertPlus-CheX-MIMIC Stanford",
+     "CRIMSON": 0.212,
+     "1/RadCliQ-v1": 0.831,
+     "BLEU": 0.159,
+     "BertScore": 0.346,
+     "SembScore": 0.407,
+     "RadGraph": 0.218,
+     "RaTEScore": 0.497,
+     "GREEN": 0.274
+    },
+    {
+     "name": "Cvt2distilgpt2-MIMIC CSIRO",
+     "CRIMSON": 0.124,
+     "1/RadCliQ-v1": 0.636,
+     "BLEU": 0.128,
+     "BertScore": 0.277,
+     "SembScore": 0.271,
+     "RadGraph": 0.122,
+     "RaTEScore": 0.42,
+     "GREEN": 0.215
+    },
+    {
+     "name": "Cvt2distilgpt2-IU CSIRO",
+     "CRIMSON": 0.032,
+     "1/RadCliQ-v1": 0.587,
+     "BLEU": 0.087,
+     "BertScore": 0.275,
+     "SembScore": 0.158,
+     "RadGraph": 0.108,
+     "RaTEScore": 0.382,
+     "GREEN": 0.147
+    },
+    {
+     "name": "MedVersa Harvard",
+     "CRIMSON": 0.086,
+     "1/RadCliQ-v1": 0.721,
+     "BLEU": 0.139,
+     "BertScore": 0.319,
+     "SembScore": 0.348,
+     "RadGraph": 0.153,
+     "RaTEScore": 0.47,
+     "GREEN": 0.243
+    },
+    {
+     "name": "RadFM SJTU",
+     "CRIMSON": -0.179,
+     "1/RadCliQ-v1": 0.568,
+     "BLEU": 0.084,
+     "BertScore": 0.223,
+     "SembScore": 0.216,
+     "RadGraph": 0.086,
+     "RaTEScore": 0.396,
+     "GREEN": 0.096
+    },
+    {
+     "name": "RaDialog TUM",
+     "CRIMSON": 0.111,
+     "1/RadCliQ-v1": 0.704,
+     "BLEU": 0.133,
+     "BertScore": 0.305,
+     "SembScore": 0.349,
+     "RadGraph": 0.143,
+     "RaTEScore": 0.445,
+     "GREEN": 0.211
+    },
+    {
+     "name": "RGRG TUM",
+     "CRIMSON": -0.011,
+     "1/RadCliQ-v1": 0.674,
+     "BLEU": 0.154,
+     "BertScore": 0.308,
+     "SembScore": 0.273,
+     "RadGraph": 0.151,
+     "RaTEScore": 0.453,
+     "GREEN": 0.216
+    },
+    {
+     "name": "VLCI-MIMIC SYSU",
+     "CRIMSON": 0.018,
+     "1/RadCliQ-v1": 0.598,
+     "BLEU": 0.126,
+     "BertScore": 0.237,
+     "SembScore": 0.255,
+     "RadGraph": 0.106,
+     "RaTEScore": 0.384,
+     "GREEN": 0.165
+    },
+    {
+     "name": "VLCI-IU SYSU",
+     "CRIMSON": 0.04,
+     "1/RadCliQ-v1": 0.563,
+     "BLEU": 0.11,
+     "BertScore": 0.229,
+     "SembScore": 0.174,
+     "RadGraph": 0.098,
+     "RaTEScore": 0.418,
+     "GREEN": 0.194
+    },
+    {
+     "name": "LLM-CXR KAIST",
+     "CRIMSON": -0.433,
+     "1/RadCliQ-v1": 0.517,
+     "BLEU": 0.04,
+     "BertScore": 0.158,
+     "SembScore": 0.208,
+     "RadGraph": 0.039,
+     "RaTEScore": 0.321,
+     "GREEN": 0.022
+    },
+    {
+     "name": "GPT4V OpenAI",
+     "CRIMSON": -0.052,
+     "1/RadCliQ-v1": 0.569,
+     "BLEU": 0.098,
+     "BertScore": 0.217,
+     "SembScore": 0.229,
+     "RadGraph": 0.086,
+     "RaTEScore": 0.415,
+     "GREEN": 0.152
+    },
+    {
+     "name": "BiomedGPT-IU Lehigh University",
+     "CRIMSON": -0.001,
+     "1/RadCliQ-v1": 0.566,
+     "BLEU": 0.055,
+     "BertScore": 0.215,
+     "SembScore": 0.251,
+     "RadGraph": 0.062,
+     "RaTEScore": 0.351,
+     "GREEN": 0.118
+    },
+    {
+     "name": "MAIRA-2 Microsoft",
+     "CRIMSON": 0.238,
+     "1/RadCliQ-v1": 0.782,
+     "BLEU": 0.165,
+     "BertScore": 0.346,
+     "SembScore": 0.359,
+     "RadGraph": 0.195,
+     "RaTEScore": 0.485,
+     "GREEN": 0.273
+    },
+    {
+     "name": "CXRMate-ED CSIRO",
+     "CRIMSON": 0.157,
+     "1/RadCliQ-v1": 0.732,
+     "BLEU": 0.158,
+     "BertScore": 0.332,
+     "SembScore": 0.32,
+     "RadGraph": 0.175,
+     "RaTEScore": 0.498,
+     "GREEN": 0.265
+    },
+    {
+     "name": "CXRMate-RRG24 CSIRO",
+     "CRIMSON": 0.151,
+     "1/RadCliQ-v1": 0.812,
+     "BLEU": 0.158,
+     "BertScore": 0.323,
+     "SembScore": 0.415,
+     "RadGraph": 0.218,
+     "RaTEScore": 0.521,
+     "GREEN": 0.276
+    },
+    {
+     "name": "Libra University of Glasgow",
+     "CRIMSON": 0.17,
+     "1/RadCliQ-v1": 0.718,
+     "BLEU": 0.157,
+     "BertScore": 0.319,
+     "SembScore": 0.323,
+     "RadGraph": 0.169,
+     "RaTEScore": 0.466,
+     "GREEN": 0.253
+    },
+    {
+     "name": "MoERad-IU IIT Madras",
+     "CRIMSON": 0.032,
+     "1/RadCliQ-v1": 0.595,
+     "BLEU": 0.075,
+     "BertScore": 0.284,
+     "SembScore": 0.175,
+     "RadGraph": 0.102,
+     "RaTEScore": 0.39,
+     "GREEN": 0.127
+    },
+    {
+     "name": "MoERad-MIMIC IIT Madras",
+     "CRIMSON": -0.033,
+     "1/RadCliQ-v1": 0.641,
+     "BLEU": 0.122,
+     "BertScore": 0.268,
+     "SembScore": 0.3,
+     "RadGraph": 0.12,
+     "RaTEScore": 0.434,
+     "GREEN": 0.166
+    },
+    {
+     "name": "DD-LLaVA-X SNUH",
+     "CRIMSON": 0.246,
+     "1/RadCliQ-v1": 0.752,
+     "BLEU": 0.085,
+     "BertScore": 0.317,
+     "SembScore": 0.385,
+     "RadGraph": 0.172,
+     "RaTEScore": 0.476,
+     "GREEN": 0.206
+    },
+    {
+     "name": "MedGemma Google",
+     "CRIMSON": 0.111,
+     "1/RadCliQ-v1": 0.706,
+     "BLEU": 0.147,
+     "BertScore": 0.327,
+     "SembScore": 0.325,
+     "RadGraph": 0.137,
+     "RaTEScore": 0.511,
+     "GREEN": 0.246
+    },
+    {
+     "name": "UniRG-CXR Microsoft Research",
+     "CRIMSON": 0.192,
+     "1/RadCliQ-v1": 1.091,
+     "BLEU": 0.214,
+     "BertScore": 0.416,
+     "SembScore": 0.527,
+     "RadGraph": 0.26,
+     "RaTEScore": 0.581,
+     "GREEN": 0.306
+    },
+    {
+     "name": "CheXOne-R1 Stanford",
+     "CRIMSON": 0.094,
+     "1/RadCliQ-v1": 0.992,
+     "BLEU": 0.175,
+     "BertScore": 0.396,
+     "SembScore": 0.489,
+     "RadGraph": 0.242,
+     "RaTEScore": 0.522,
+     "GREEN": 0.25
+    },
+    {
+     "name": "CARE-X Microsoft Research",
+     "CRIMSON": 0.248,
+     "1/RadCliQ-v1": 0.951,
+     "BLEU": 0.208,
+     "BertScore": 0.407,
+     "SembScore": 0.42,
+     "RadGraph": 0.249,
+     "RaTEScore": 0.579,
+     "GREEN": 0.306
+    },
+    {
+     "name": "CX-Mind SJTU",
+     "CRIMSON": 0.033,
+     "1/RadCliQ-v1": 0.664,
+     "BLEU": 0.114,
+     "BertScore": 0.325,
+     "SembScore": 0.244,
+     "RadGraph": 0.133,
+     "RaTEScore": 0.498,
+     "GREEN": 0.179
+    },
+    {
+     "name": "MedGemma 1.5 4B Google",
+     "CRIMSON": 0.063,
+     "1/RadCliQ-v1": 0.607,
+     "BLEU": 0.104,
+     "BertScore": 0.18,
+     "SembScore": 0.36,
+     "RadGraph": 0.118,
+     "RaTEScore": 0.524,
+     "GREEN": 0.273
+    },
+    {
+     "name": "Deepwise-RG Deepwise",
+     "CRIMSON": 0.335,
+     "1/RadCliQ-v1": 1.102,
+     "BLEU": 0.217,
+     "BertScore": 0.42,
+     "SembScore": 0.495,
+     "RadGraph": 0.287,
+     "RaTEScore": 0.575,
+     "GREEN": 0.328
+    }
+   ],
+   "ours": {
+    "medgemma_full": {
+     "CRIMSON": {
+      "value": 0.1799290322580645,
+      "rank": 7,
+      "of": 30
+     },
+     "1/RadCliQ-v1": {
+      "value": 0.7319108616608739,
+      "rank": 11,
+      "of": 30
+     },
+     "BLEU": {
+      "value": 0.14132617832205946,
+      "rank": 14,
+      "of": 30
+     },
+     "BertScore": {
+      "value": 0.24244585175127273,
+      "rank": 23,
+      "of": 30
+     },
+     "SembScore": {
+      "value": 0.3914922852430621,
+      "rank": 7,
+      "of": 30
+     },
+     "RadGraph": {
+      "value": 0.23624042966585815,
+      "rank": 5,
+      "of": 30
+     },
+     "RaTEScore": {
+      "value": 0.5405065895742789,
+      "rank": 4,
+      "of": 30
+     },
+     "GREEN": {
+      "value": 0.27176779313876087,
+      "rank": 8,
+      "of": 30
+     }
+    },
+    "chexone_full": {
+     "CRIMSON": {
+      "value": 0.21931774193548387,
+      "rank": 5,
+      "of": 30
+     },
+     "1/RadCliQ-v1": {
+      "value": 0.7395146983815429,
+      "rank": 10,
+      "of": 30
+     },
+     "BLEU": {
+      "value": 0.15277498200760373,
+      "rank": 12,
+      "of": 30
+     },
+     "BertScore": {
+      "value": 0.2527939302906875,
+      "rank": 23,
+      "of": 30
+     },
+     "SembScore": {
+      "value": 0.3985378541660654,
+      "rank": 7,
+      "of": 30
+     },
+     "RadGraph": {
+      "value": 0.22817485886877759,
+      "rank": 5,
+      "of": 30
+     },
+     "RaTEScore": {
+      "value": 0.545387631749143,
+      "rank": 4,
+      "of": 30
+     },
+     "GREEN": {
+      "value": 0.3050318856770469,
+      "rank": 4,
+      "of": 30
+     }
+    }
+   }
+  },
+  "test_mimic": {
+   "leaderboard": [
+    {
+     "name": "CheXagent Stanford",
+     "CRIMSON": 0.096,
+     "1/RadCliQ-v1": 0.74,
+     "BLEU": 0.154,
+     "BertScore": 0.346,
+     "SembScore": 0.346,
+     "RadGraph": 0.147,
+     "RaTEScore": 0.474,
+     "GREEN": 0.257
+    },
+    {
+     "name": "CheXpertPlus-MIMIC Stanford",
+     "CRIMSON": 0.107,
+     "1/RadCliQ-v1": 0.795,
+     "BLEU": 0.195,
+     "BertScore": 0.368,
+     "SembScore": 0.375,
+     "RadGraph": 0.17,
+     "RaTEScore": 0.485,
+     "GREEN": 0.311
+    },
+    {
+     "name": "CheXpertPlus-CheX Stanford",
+     "CRIMSON": 0.026,
+     "1/RadCliQ-v1": 0.703,
+     "BLEU": 0.11,
+     "BertScore": 0.32,
+     "SembScore": 0.325,
+     "RadGraph": 0.142,
+     "RaTEScore": 0.469,
+     "GREEN": 0.225
+    },
+    {
+     "name": "CheXpertPlus-CheX-MIMIC Stanford",
+     "CRIMSON": 0.132,
+     "1/RadCliQ-v1": 0.812,
+     "BLEU": 0.188,
+     "BertScore": 0.374,
+     "SembScore": 0.379,
+     "RadGraph": 0.181,
+     "RaTEScore": 0.49,
+     "GREEN": 0.305
+    },
+    {
+     "name": "Cvt2distilgpt2-MIMIC CSIRO",
+     "CRIMSON": 0.09,
+     "1/RadCliQ-v1": 0.724,
+     "BLEU": 0.167,
+     "BertScore": 0.336,
+     "SembScore": 0.33,
+     "RadGraph": 0.149,
+     "RaTEScore": 0.432,
+     "GREEN": 0.268
+    },
+    {
+     "name": "Cvt2distilgpt2-IU CSIRO",
+     "CRIMSON": 0.042,
+     "1/RadCliQ-v1": 0.614,
+     "BLEU": 0.081,
+     "BertScore": 0.304,
+     "SembScore": 0.191,
+     "RadGraph": 0.103,
+     "RaTEScore": 0.448,
+     "GREEN": 0.164
+    },
+    {
+     "name": "MedVersa Harvard",
+     "CRIMSON": 0.17,
+     "1/RadCliQ-v1": 1.086,
+     "BLEU": 0.271,
+     "BertScore": 0.444,
+     "SembScore": 0.465,
+     "RadGraph": 0.269,
+     "RaTEScore": 0.55,
+     "GREEN": 0.374
+    },
+    {
+     "name": "RadFM SJTU",
+     "CRIMSON": -0.074,
+     "1/RadCliQ-v1": 0.646,
+     "BLEU": 0.13,
+     "BertScore": 0.309,
+     "SembScore": 0.259,
+     "RadGraph": 0.108,
+     "RaTEScore": 0.45,
+     "GREEN": 0.185
+    },
+    {
+     "name": "RaDialog TUM",
+     "CRIMSON": 0.035,
+     "1/RadCliQ-v1": 0.787,
+     "BLEU": 0.17,
+     "BertScore": 0.354,
+     "SembScore": 0.385,
+     "RadGraph": 0.17,
+     "RaTEScore": 0.485,
+     "GREEN": 0.273
+    },
+    {
+     "name": "RGRG TUM",
+     "CRIMSON": -0.057,
+     "1/RadCliQ-v1": 0.75,
+     "BLEU": 0.185,
+     "BertScore": 0.345,
+     "SembScore": 0.341,
+     "RadGraph": 0.167,
+     "RaTEScore": 0.491,
+     "GREEN": 0.273
+    },
+    {
+     "name": "VLCI-MIMIC SYSU",
+     "CRIMSON": 0.016,
+     "1/RadCliQ-v1": 0.688,
+     "BLEU": 0.187,
+     "BertScore": 0.314,
+     "SembScore": 0.305,
+     "RadGraph": 0.14,
+     "RaTEScore": 0.45,
+     "GREEN": 0.256
+    },
+    {
+     "name": "VLCI-IU SYSU",
+     "CRIMSON": 0.038,
+     "1/RadCliQ-v1": 0.606,
+     "BLEU": 0.12,
+     "BertScore": 0.274,
+     "SembScore": 0.212,
+     "RadGraph": 0.109,
+     "RaTEScore": 0.449,
+     "GREEN": 0.21
+    },
+    {
+     "name": "LLM-CXR KAIST",
+     "CRIMSON": -0.4,
+     "1/RadCliQ-v1": 0.514,
+     "BLEU": 0.052,
+     "BertScore": 0.178,
+     "SembScore": 0.154,
+     "RadGraph": 0.046,
+     "RaTEScore": 0.341,
+     "GREEN": 0.043
+    },
+    {
+     "name": "GPT4V OpenAI",
+     "CRIMSON": -0.158,
+     "1/RadCliQ-v1": 0.559,
+     "BLEU": 0.099,
+     "BertScore": 0.209,
+     "SembScore": 0.214,
+     "RadGraph": 0.084,
+     "RaTEScore": 0.423,
+     "GREEN": 0.161
+    },
+    {
+     "name": "BiomedGPT-IU Lehigh University",
+     "CRIMSON": -0.018,
+     "1/RadCliQ-v1": 0.561,
+     "BLEU": 0.043,
+     "BertScore": 0.213,
+     "SembScore": 0.239,
+     "RadGraph": 0.064,
+     "RaTEScore": 0.36,
+     "GREEN": 0.123
+    },
+    {
+     "name": "MAIRA-2 Microsoft",
+     "CRIMSON": 0.075,
+     "1/RadCliQ-v1": 0.694,
+     "BLEU": 0.088,
+     "BertScore": 0.308,
+     "SembScore": 0.339,
+     "RadGraph": 0.131,
+     "RaTEScore": 0.517,
+     "GREEN": 0.224
+    },
+    {
+     "name": "CXRMate-ED CSIRO",
+     "CRIMSON": 0.102,
+     "1/RadCliQ-v1": 0.887,
+     "BLEU": 0.209,
+     "BertScore": 0.394,
+     "SembScore": 0.396,
+     "RadGraph": 0.223,
+     "RaTEScore": 0.531,
+     "GREEN": 0.327
+    },
+    {
+     "name": "CXRMate-RRG24 CSIRO",
+     "CRIMSON": 0.153,
+     "1/RadCliQ-v1": 0.887,
+     "BLEU": 0.198,
+     "BertScore": 0.38,
+     "SembScore": 0.424,
+     "RadGraph": 0.22,
+     "RaTEScore": 0.521,
+     "GREEN": 0.338
+    },
+    {
+     "name": "Libra University of Glasgow",
+     "CRIMSON": 0.152,
+     "1/RadCliQ-v1": 0.897,
+     "BLEU": 0.232,
+     "BertScore": 0.402,
+     "SembScore": 0.403,
+     "RadGraph": 0.218,
+     "RaTEScore": 0.523,
+     "GREEN": 0.356
+    },
+    {
+     "name": "MoERad-IU IIT Madras",
+     "CRIMSON": 0.043,
+     "1/RadCliQ-v1": 0.643,
+     "BLEU": 0.064,
+     "BertScore": 0.321,
+     "SembScore": 0.213,
+     "RadGraph": 0.122,
+     "RaTEScore": 0.455,
+     "GREEN": 0.174
+    },
+    {
+     "name": "MoERad-MIMIC IIT Madras",
+     "CRIMSON": -0.016,
+     "1/RadCliQ-v1": 0.726,
+     "BLEU": 0.163,
+     "BertScore": 0.341,
+     "SembScore": 0.334,
+     "RadGraph": 0.143,
+     "RaTEScore": 0.465,
+     "GREEN": 0.24
+    },
+    {
+     "name": "DD-LLaVA-X SNUH",
+     "CRIMSON": 0.114,
+     "1/RadCliQ-v1": 0.801,
+     "BLEU": 0.154,
+     "BertScore": 0.349,
+     "SembScore": 0.402,
+     "RadGraph": 0.182,
+     "RaTEScore": 0.505,
+     "GREEN": 0.301
+    },
+    {
+     "name": "MedGemma Google",
+     "CRIMSON": 0.082,
+     "1/RadCliQ-v1": 0.744,
+     "BLEU": 0.165,
+     "BertScore": 0.346,
+     "SembScore": 0.339,
+     "RadGraph": 0.159,
+     "RaTEScore": 0.549,
+     "GREEN": 0.293
+    },
+    {
+     "name": "UniRG-CXR Microsoft Research",
+     "CRIMSON": 0.181,
+     "1/RadCliQ-v1": 1.18,
+     "BLEU": 0.259,
+     "BertScore": 0.47,
+     "SembScore": 0.495,
+     "RadGraph": 0.268,
+     "RaTEScore": 0.602,
+     "GREEN": 0.36
+    },
+    {
+     "name": "CheXOne-R1 Stanford",
+     "CRIMSON": 0.08,
+     "1/RadCliQ-v1": 1.023,
+     "BLEU": 0.215,
+     "BertScore": 0.441,
+     "SembScore": 0.456,
+     "RadGraph": 0.234,
+     "RaTEScore": 0.519,
+     "GREEN": 0.314
+    },
+    {
+     "name": "CARE-X Microsoft Research",
+     "CRIMSON": 0.225,
+     "1/RadCliQ-v1": 1.213,
+     "BLEU": 0.267,
+     "BertScore": 0.489,
+     "SembScore": 0.469,
+     "RadGraph": 0.283,
+     "RaTEScore": 0.607,
+     "GREEN": 0.388
+    },
+    {
+     "name": "CX-Mind SJTU",
+     "CRIMSON": 0.062,
+     "1/RadCliQ-v1": 0.793,
+     "BLEU": 0.153,
+     "BertScore": 0.394,
+     "SembScore": 0.323,
+     "RadGraph": 0.174,
+     "RaTEScore": 0.543,
+     "GREEN": 0.267
+    },
+    {
+     "name": "MedGemma 1.5 4B Google",
+     "CRIMSON": 0.006,
+     "1/RadCliQ-v1": 0.653,
+     "BLEU": 0.117,
+     "BertScore": 0.228,
+     "SembScore": 0.355,
+     "RadGraph": 0.152,
+     "RaTEScore": 0.565,
+     "GREEN": 0.284
+    },
+    {
+     "name": "Deepwise-RG Deepwise",
+     "CRIMSON": 0.26,
+     "1/RadCliQ-v1": 1.394,
+     "BLEU": 0.264,
+     "BertScore": 0.496,
+     "SembScore": 0.524,
+     "RadGraph": 0.316,
+     "RaTEScore": 0.619,
+     "GREEN": 0.386
+    }
+   ],
+   "ours": {
+    "medgemma_full": {
+     "CRIMSON": {
+      "value": -0.008133599999999998,
+      "rank": 24,
+      "of": 30
+     },
+     "1/RadCliQ-v1": {
+      "value": 0.5716849267492506,
+      "rank": 27,
+      "of": 30
+     },
+     "BLEU": {
+      "value": 0.1129627730152759,
+      "rank": 23,
+      "of": 30
+     },
+     "BertScore": {
+      "value": 0.14884747436814622,
+      "rank": 30,
+      "of": 30
+     },
+     "SembScore": {
+      "value": 0.2904092762335524,
+      "rank": 23,
+      "of": 30
+     },
+     "RadGraph": {
+      "value": 0.1335613219563264,
+      "rank": 22,
+      "of": 30
+     },
+     "RaTEScore": {
+      "value": 0.5221654772049087,
+      "rank": 10,
+      "of": 30
+     },
+     "GREEN": {
+      "value": 0.23043400488400487,
+      "rank": 21,
+      "of": 30
+     }
+    },
+    "chexone_full": {
+     "CRIMSON": {
+      "value": 0.027652,
+      "rank": 21,
+      "of": 30
+     },
+     "1/RadCliQ-v1": {
+      "value": 0.6328669270843017,
+      "rank": 25,
+      "of": 30
+     },
+     "BLEU": {
+      "value": 0.13081776452009578,
+      "rank": 20,
+      "of": 30
+     },
+     "BertScore": {
+      "value": 0.18798067839576965,
+      "rank": 29,
+      "of": 30
+     },
+     "SembScore": {
+      "value": 0.3565391950759411,
+      "rank": 13,
+      "of": 30
+     },
+     "RadGraph": {
+      "value": 0.16465408129393944,
+      "rank": 15,
+      "of": 30
+     },
+     "RaTEScore": {
+      "value": 0.5201913955074571,
+      "rank": 11,
+      "of": 30
+     },
+     "GREEN": {
+      "value": 0.2567359529359529,
+      "rank": 19,
+      "of": 30
+     }
+    }
+   }
+  },
+  "test_openi": {
+   "leaderboard": [
+    {
+     "name": "CheXagent Stanford",
+     "CRIMSON": 0.633,
+     "1/RadCliQ-v1": 0.852,
+     "BLEU": 0.119,
+     "BertScore": 0.367,
+     "SembScore": 0.502,
+     "RadGraph": 0.138,
+     "RaTEScore": 0.503,
+     "GREEN": 0.389
+    },
+    {
+     "name": "CheXpertPlus-MIMIC Stanford",
+     "CRIMSON": 0.619,
+     "1/RadCliQ-v1": 1.022,
+     "BLEU": 0.179,
+     "BertScore": 0.401,
+     "SembScore": 0.601,
+     "RadGraph": 0.17,
+     "RaTEScore": 0.585,
+     "GREEN": 0.661
+    },
+    {
+     "name": "CheXpertPlus-CheX Stanford",
+     "CRIMSON": 0.559,
+     "1/RadCliQ-v1": 0.917,
+     "BLEU": 0.157,
+     "BertScore": 0.411,
+     "SembScore": 0.495,
+     "RadGraph": 0.153,
+     "RaTEScore": 0.534,
+     "GREEN": 0.541
+    },
+    {
+     "name": "CheXpertPlus-CheX-MIMIC Stanford",
+     "CRIMSON": 0.632,
+     "1/RadCliQ-v1": 1.174,
+     "BLEU": 0.198,
+     "BertScore": 0.451,
+     "SembScore": 0.593,
+     "RadGraph": 0.211,
+     "RaTEScore": 0.618,
+     "GREEN": 0.648
+    },
+    {
+     "name": "Cvt2distilgpt2-MIMIC CSIRO",
+     "CRIMSON": 0.632,
+     "1/RadCliQ-v1": 1.165,
+     "BLEU": 0.201,
+     "BertScore": 0.437,
+     "SembScore": 0.614,
+     "RadGraph": 0.208,
+     "RaTEScore": 0.606,
+     "GREEN": 0.682
+    },
+    {
+     "name": "Cvt2distilgpt2-IU CSIRO",
+     "CRIMSON": 0.654,
+     "1/RadCliQ-v1": 1.268,
+     "BLEU": 0.244,
+     "BertScore": 0.476,
+     "SembScore": 0.548,
+     "RadGraph": 0.265,
+     "RaTEScore": 0.62,
+     "GREEN": 0.686
+    },
+    {
+     "name": "MedVersa Harvard",
+     "CRIMSON": 0.623,
+     "1/RadCliQ-v1": 1.294,
+     "BLEU": 0.215,
+     "BertScore": 0.473,
+     "SembScore": 0.609,
+     "RadGraph": 0.234,
+     "RaTEScore": 0.65,
+     "GREEN": 0.631
+    },
+    {
+     "name": "RadFM SJTU",
+     "CRIMSON": 0.562,
+     "1/RadCliQ-v1": 1.218,
+     "BLEU": 0.211,
+     "BertScore": 0.465,
+     "SembScore": 0.58,
+     "RadGraph": 0.228,
+     "RaTEScore": 0.627,
+     "GREEN": 0.615
+    },
+    {
+     "name": "RaDialog TUM",
+     "CRIMSON": 0.532,
+     "1/RadCliQ-v1": 1.094,
+     "BLEU": 0.205,
+     "BertScore": 0.445,
+     "SembScore": 0.553,
+     "RadGraph": 0.203,
+     "RaTEScore": 0.586,
+     "GREEN": 0.586
+    },
+    {
+     "name": "RGRG TUM",
+     "CRIMSON": 0.481,
+     "1/RadCliQ-v1": 1.157,
+     "BLEU": 0.201,
+     "BertScore": 0.429,
+     "SembScore": 0.606,
+     "RadGraph": 0.221,
+     "RaTEScore": 0.62,
+     "GREEN": 0.665
+    },
+    {
+     "name": "VLCI-MIMIC SYSU",
+     "CRIMSON": -0.036,
+     "1/RadCliQ-v1": 0.933,
+     "BLEU": 0.142,
+     "BertScore": 0.379,
+     "SembScore": 0.482,
+     "RadGraph": 0.22,
+     "RaTEScore": 0.578,
+     "GREEN": 0.474
+    },
+    {
+     "name": "VLCI-IU SYSU",
+     "CRIMSON": 0.654,
+     "1/RadCliQ-v1": 1.383,
+     "BLEU": 0.268,
+     "BertScore": 0.456,
+     "SembScore": 0.619,
+     "RadGraph": 0.288,
+     "RaTEScore": 0.679,
+     "GREEN": 0.698
+    },
+    {
+     "name": "LLM-CXR KAIST",
+     "CRIMSON": -0.554,
+     "1/RadCliQ-v1": 0.482,
+     "BLEU": 0.033,
+     "BertScore": 0.174,
+     "SembScore": 0.062,
+     "RadGraph": 0.023,
+     "RaTEScore": 0.28,
+     "GREEN": 0.025
+    },
+    {
+     "name": "GPT4V OpenAI",
+     "CRIMSON": 0.52,
+     "1/RadCliQ-v1": 0.664,
+     "BLEU": 0.072,
+     "BertScore": 0.217,
+     "SembScore": 0.408,
+     "RadGraph": 0.144,
+     "RaTEScore": 0.517,
+     "GREEN": 0.651
+    },
+    {
+     "name": "BiomedGPT-IU Lehigh University",
+     "CRIMSON": 0.654,
+     "1/RadCliQ-v1": 0.994,
+     "BLEU": 0.206,
+     "BertScore": 0.382,
+     "SembScore": 0.542,
+     "RadGraph": 0.22,
+     "RaTEScore": 0.543,
+     "GREEN": 0.523
+    },
+    {
+     "name": "MAIRA-2 Microsoft",
+     "CRIMSON": 0.552,
+     "1/RadCliQ-v1": 1.256,
+     "BLEU": 0.215,
+     "BertScore": 0.461,
+     "SembScore": 0.606,
+     "RadGraph": 0.232,
+     "RaTEScore": 0.627,
+     "GREEN": 0.194
+    },
+    {
+     "name": "CXRMate-ED CSIRO",
+     "CRIMSON": 0.534,
+     "1/RadCliQ-v1": 1.274,
+     "BLEU": 0.229,
+     "BertScore": 0.485,
+     "SembScore": 0.557,
+     "RadGraph": 0.249,
+     "RaTEScore": 0.655,
+     "GREEN": 0.685
+    },
+    {
+     "name": "CXRMate-RRG24 CSIRO",
+     "CRIMSON": 0.633,
+     "1/RadCliQ-v1": 1.557,
+     "BLEU": 0.25,
+     "BertScore": 0.48,
+     "SembScore": 0.642,
+     "RadGraph": 0.302,
+     "RaTEScore": 0.666,
+     "GREEN": 0.68
+    },
+    {
+     "name": "Libra University of Glasgow",
+     "CRIMSON": 0.642,
+     "1/RadCliQ-v1": 1.183,
+     "BLEU": 0.183,
+     "BertScore": 0.444,
+     "SembScore": 0.614,
+     "RadGraph": 0.21,
+     "RaTEScore": 0.624,
+     "GREEN": 0.698
+    },
+    {
+     "name": "MoERad-IU IIT Madras",
+     "CRIMSON": 0.656,
+     "1/RadCliQ-v1": 1.96,
+     "BLEU": 0.277,
+     "BertScore": 0.531,
+     "SembScore": 0.641,
+     "RadGraph": 0.341,
+     "RaTEScore": 0.684,
+     "GREEN": 0.665
+    },
+    {
+     "name": "MoERad-MIMIC IIT Madras",
+     "CRIMSON": 0.573,
+     "1/RadCliQ-v1": 1.022,
+     "BLEU": 0.171,
+     "BertScore": 0.421,
+     "SembScore": 0.559,
+     "RadGraph": 0.178,
+     "RaTEScore": 0.603,
+     "GREEN": 0.584
+    },
+    {
+     "name": "DD-LLaVA-X SNUH",
+     "CRIMSON": 0.635,
+     "1/RadCliQ-v1": 1.207,
+     "BLEU": 0.189,
+     "BertScore": 0.445,
+     "SembScore": 0.6,
+     "RadGraph": 0.233,
+     "RaTEScore": 0.636,
+     "GREEN": 0.671
+    },
+    {
+     "name": "MedGemma Google",
+     "CRIMSON": 0.524,
+     "1/RadCliQ-v1": 1.345,
+     "BLEU": 0.217,
+     "BertScore": 0.476,
+     "SembScore": 0.6,
+     "RadGraph": 0.26,
+     "RaTEScore": 0.678,
+     "GREEN": 0.724
+    },
+    {
+     "name": "UniRG-CXR Microsoft Research",
+     "CRIMSON": 0.632,
+     "1/RadCliQ-v1": 3.907,
+     "BLEU": 0.368,
+     "BertScore": 0.606,
+     "SembScore": 0.705,
+     "RadGraph": 0.396,
+     "RaTEScore": 0.729,
+     "GREEN": 0.664
+    },
+    {
+     "name": "CheXOne-R1 Stanford",
+     "CRIMSON": 0.49,
+     "1/RadCliQ-v1": 1.515,
+     "BLEU": 0.254,
+     "BertScore": 0.507,
+     "SembScore": 0.611,
+     "RadGraph": 0.277,
+     "RaTEScore": 0.617,
+     "GREEN": 0.585
+    },
+    {
+     "name": "CX-Mind SJTU",
+     "CRIMSON": 0.648,
+     "1/RadCliQ-v1": 1.385,
+     "BLEU": 0.21,
+     "BertScore": 0.504,
+     "SembScore": 0.613,
+     "RadGraph": 0.23,
+     "RaTEScore": 0.662,
+     "GREEN": 0.644
+    },
+    {
+     "name": "CARE-X Microsoft Research",
+     "CRIMSON": 0.661,
+     "1/RadCliQ-v1": 1.976,
+     "BLEU": 0.279,
+     "BertScore": 0.552,
+     "SembScore": 0.662,
+     "RadGraph": 0.301,
+     "RaTEScore": 0.702,
+     "GREEN": 0.63
+    },
+    {
+     "name": "MedGemma 1.5 4B Google",
+     "CRIMSON": 0.561,
+     "1/RadCliQ-v1": 1.339,
+     "BLEU": 0.214,
+     "BertScore": 0.446,
+     "SembScore": 0.643,
+     "RadGraph": 0.263,
+     "RaTEScore": 0.675,
+     "GREEN": 0.706
+    },
+    {
+     "name": "Deepwise-RG Deepwise",
+     "CRIMSON": 0.641,
+     "1/RadCliQ-v1": 2.198,
+     "BLEU": 0.316,
+     "BertScore": 0.552,
+     "SembScore": 0.668,
+     "RadGraph": 0.337,
+     "RaTEScore": 0.684,
+     "GREEN": 0.64
+    }
+   ],
+   "ours": {
+    "medgemma_full": {
+     "CRIMSON": {
+      "value": 0.2975204,
+      "rank": 28,
+      "of": 30
+     },
+     "1/RadCliQ-v1": {
+      "value": 0.7614771236837681,
+      "rank": 28,
+      "of": 30
+     },
+     "BLEU": {
+      "value": 0.14717396821077358,
+      "rank": 26,
+      "of": 30
+     },
+     "BertScore": {
+      "value": 0.2278955452402339,
+      "rank": 28,
+      "of": 30
+     },
+     "SembScore": {
+      "value": 0.4968804933232537,
+      "rank": 26,
+      "of": 30
+     },
+     "RadGraph": {
+      "value": 0.21394117747228134,
+      "rank": 20,
+      "of": 30
+     },
+     "RaTEScore": {
+      "value": 0.5951505469687205,
+      "rank": 22,
+      "of": 30
+     },
+     "GREEN": {
+      "value": 0.5938098845598845,
+      "rank": 21,
+      "of": 30
+     }
+    },
+    "chexone_full": {
+     "CRIMSON": {
+      "value": 0.2050794,
+      "rank": 28,
+      "of": 30
+     },
+     "1/RadCliQ-v1": {
+      "value": 0.7247056645441204,
+      "rank": 28,
+      "of": 30
+     },
+     "BLEU": {
+      "value": 0.14122278379553332,
+      "rank": 27,
+      "of": 30
+     },
+     "BertScore": {
+      "value": 0.22022229138921748,
+      "rank": 28,
+      "of": 30
+     },
+     "SembScore": {
+      "value": 0.4642736465118059,
+      "rank": 28,
+      "of": 30
+     },
+     "RadGraph": {
+      "value": 0.1966512237176674,
+      "rank": 24,
+      "of": 30
+     },
+     "RaTEScore": {
+      "value": 0.5870320689686164,
+      "rank": 22,
+      "of": 30
+     },
+     "GREEN": {
+      "value": 0.5402311688311688,
+      "rank": 25,
+      "of": 30
+     }
+    }
+   }
+  }
+ }
+}

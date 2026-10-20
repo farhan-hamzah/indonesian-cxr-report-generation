@@ -1,0 +1,48 @@
+This folder contains two fine-tuned models with different licenses. Anyone receiving this
+folder must receive this file and is bound by both sets of terms.
+
+==============================================================================================
+models/medgemma/  -  MedGemma 1.5 4B + LoRA
+==============================================================================================
+
+HAI-DEF is provided under and subject to the Health AI Developer Foundations Terms of Use found at https://developers.google.com/health-ai-developer-foundations/terms
+
+The files in models/medgemma/ are a LoRA adapter (a Model Derivative) fine-tuned from
+google/medgemma-1.5-4b-it, together with that model's tokenizer and processor files, which
+were re-saved by the training tools (Unsloth / TRL) and may differ from the originals.
+The adapter does not contain the base model weights; they are downloaded from Hugging Face
+under the same Terms.
+
+Use restrictions (Terms, Section 3.2): HAI-DEF and Model Derivatives may not be used for the
+restricted uses in the Health AI Developer Foundations Prohibited Use Policy, for any use that
+could cause a Health Regulatory Authority to deem Google a manufacturer of a medical device,
+or in violation of applicable laws and regulations. Anyone receiving this folder must receive
+these Terms and is bound by these use restrictions.
+
+==============================================================================================
+models/chexone/  -  CheXOne 3B + LoRA
+==============================================================================================
+
+Base model: CheXOne (StanfordAIMI/CheXOne, https://huggingface.co/StanfordAIMI/CheXOne),
+Stanford AIMI. Paper: https://arxiv.org/abs/2604.00493
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0),
+https://creativecommons.org/licenses/by-nc/4.0/
+
+Changes made: the files in models/chexone/ are a LoRA adapter trained on top of CheXOne to
+write chest X-ray report sections in Bahasa Indonesia (Indonesian translations of CheXpert
+Plus and MIMIC-CXR reports), together with CheXOne's tokenizer and processor files, which were
+re-saved by the training tools (Unsloth / TRL) and may differ from the originals. The adapter
+does not contain CheXOne's weights; they are downloaded from Hugging Face under CheXOne's
+license. The adapter is shared under the same CC BY-NC 4.0 terms.
+
+NON-COMMERCIAL USE ONLY. CheXOne is itself post-trained from Qwen2.5-VL-3B-Instruct
+(https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct); that model's license terms apply as well.
+
+==============================================================================================
+Both models
+==============================================================================================
+
+Research models, not medical devices. Outputs are draft reports that must be reviewed and
+approved by a qualified radiologist. The training data (CheXpert Plus: Stanford AIMI Research
+Use Agreement; MIMIC-CXR: PhysioNet Credentialed Health Data License 1.5.0) is licensed for
+non-commercial research.

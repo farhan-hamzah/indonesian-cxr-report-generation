@@ -1,0 +1,38 @@
+# Allowlist: everything at the top level is ignored unless listed here.
+# Datasets, translations, predictions (they contain report text), checkpoints and adapter
+# weights must never be pushed: MIMIC-CXR and CheXpert Plus may not be redistributed.
+/*
+!/.gitignore
+!/README.md
+!/METODOLOGI_FINETUNING.md
+!/pyproject.toml
+!/uv.lock
+!/prepare_data.py
+!/train.py
+!/infer.py
+!/evaluate.py
+!/rrg/
+!/tools/
+!/scripts/
+!/rexrank_eval/
+!/results/
+!/deploy/
+
+# deploy: only the combined package, without its model weights
+/deploy/*
+!/deploy/cxr_report_id/
+/deploy/cxr_report_id/models/
+
+# never, anywhere
+.venv/
+__pycache__/
+*.pyc
+*.parquet
+*.csv
+*.xlsx
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.log
+*.zip
