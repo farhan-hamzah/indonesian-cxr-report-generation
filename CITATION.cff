@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Indonesian Chest X-Ray Report Generation"
+abstract: >-
+  Fine-tuning MedGemma-1.5-4B and CheXOne with QLoRA to generate chest X-ray
+  radiology reports in Indonesian, evaluated with Indonesian text metrics and
+  ReXrank clinical metrics computed on ID-to-EN translations.
+authors:
+  - given-names: "Farhan"
+    family-names: "Hamzah"
+    affiliation: "Telkom University"
+  - given-names: "Achmad Baihaqie"
+    family-names: "Wibowo"
+    affiliation: "Telkom University"
+license: MIT
+repository-code: "https://github.com/farhan-hamzah/indonesian-cxr-report-generation"
+keywords:
+  - radiology report generation
+  - chest X-ray
+  - Indonesian
+  - vision-language model
+  - QLoRA
+version: "1.0.0"
+date-released: "2026-10-25"
