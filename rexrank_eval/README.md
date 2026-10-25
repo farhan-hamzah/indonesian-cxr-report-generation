@@ -39,6 +39,12 @@ Outputs per run: `<run>__rexrank.md` (table), `<run>__rexrank.json`, `<run>__rex
 - GREEN / CRIMSON run on a fixed random subset (`--llm_n` studies per test set per track, seed 42,
   the same studies for every run). Scores are cached per (reference, hypothesis) pair in
   `../outputs/rexrank_llm_cache/`, so interrupted runs resume.
+- BERTScore comes in two variants. `bertscore` follows RadEval (idf weights from the references).
+  `bertscore_cxrm` follows the default `config.py` of
+  [CXR-Report-Metric](https://github.com/rajpurkarlab/CXR-Report-Metric), the implementation ReXrank
+  cites (`USE_IDF = False`). `radcliq_v1_cxrm` is RadCliQ-v1 computed with it. Both run on the same
+  lowercased text as the other metrics, because CheXpert Plus impressions are all caps and a
+  translation cannot reproduce that. An older per-sample parquet gets the new columns with `--reuse`.
 - The table also lists mean `radcliq_v1` (lower = better): per-pair RadCliQ-v1 goes negative for near-perfect
   pairs (identical text: -1.44), so 1/mean only reads sensibly while the mean stays clearly above 0.
 - Failed LLM-judge pairs (CRIMSON turns OOM/parse errors into NaN) are not cached and are retried on the next run.

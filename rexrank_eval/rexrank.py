@@ -7,10 +7,12 @@ metrics. So the Indonesian output is first translated to English (translate.py)
 and scored against the ORIGINAL English reference reports of each dataset.
 
   BLEU-2      per-report BLEU with bigram weights (1/2, 1/2), CXR-Report-Metric tokenization
-  BertScore   distilroberta-base, layer 5, baseline-rescaled, idf over the track's references
+  BertScore   distilroberta-base, layer 5, baseline-rescaled, idf over the track's references (RadEval)
+              bertscore_cxrm: the same without idf - CXR-Report-Metric's default config (USE_IDF = False)
   SembScore   cosine of CheXbert report embeddings
   RadGraph    (entity F1 + relation F1) / 2, original RadGraph model ("radgraph_combined")
   RadCliQ-v1  CXR-Report-Metric's v1 linear model on the four above; reported as 1/mean (higher = better)
+              radcliq_v1_cxrm: the same with bertscore_cxrm
   RaTEScore   official RaTEScore
   GREEN       StanfordAIMI/GREEN-radllama2-7b            } LLM judges: fixed random subset of studies
   CRIMSON     rajpurkarlab/medgemma-4b-it-crimson        } (--llm_n per test set per track), cached
@@ -223,13 +225,39 @@ def base_metrics(pairs: pd.DataFrame) -> pd.DataFrame:
         del scorer
     print(f"[rexrank] BERTScore done ({time.time() - t0:.0f}s)", flush=True)
 
-    x = pairs[["radgraph", "bertscore", "semb_score", "bleu2"]].to_numpy()
-    xn = np.hstack([comp.scaler.transform(x), np.ones((len(x), 1))])
-    pairs["radcliq_v1"] = xn @ comp.coefs  # per-pair RadCliQ-v1 (lower = better)
+    pairs["radcliq_v1"] = radcliq_v1(comp, pairs, "bertscore")
+    pairs = add_cxrm_variant(pairs, comp)
 
     del comp
     gc.collect()
     torch.cuda.empty_cache()
+    return pairs
+
+
+def radcliq_v1(comp, pairs: pd.DataFrame, bertscore_col: str) -> np.ndarray:
+    x = pairs[["radgraph", bertscore_col, "semb_score", "bleu2"]].to_numpy()
+    xn = np.hstack([comp.scaler.transform(x), np.ones((len(x), 1))])
+    return xn @ comp.coefs  # per-pair RadCliQ-v1 (lower = better)
+
+
+def add_cxrm_variant(pairs: pd.DataFrame, comp=None) -> pd.DataFrame:
+    """BERTScore as CXR-Report-Metric (the code ReXrank cites) computes it with its default config.py,
+    USE_IDF = False; 'bertscore' above follows RadEval (idf from the references). Both on the same lowercased
+    text as every other metric: CheXpert Plus impressions are all caps, which a translation cannot reproduce,
+    and a cased score would measure that. RadCliQ-v1 is recomputed with it, the other three inputs unchanged."""
+    from radeval.metrics.bertscore._vendor import BERTScorer
+    from radeval.metrics.RadCliQv1.radcliq import CompositeMetric
+
+    t0 = time.time()
+    scorer = BERTScorer(model_type="distilroberta-base", num_layers=5, rescale_with_baseline=True, idf=False,
+                        batch_size=64, nthreads=0, all_layers=False, lang="en")
+    u = pairs[["ref", "hyp"]].drop_duplicates()
+    _, _, f1 = scorer.score(cands=u["hyp"].tolist(), refs=u["ref"].tolist(), verbose=False, batch_size=64)
+    lookup = dict(zip(zip(u["ref"], u["hyp"]), f1.numpy().tolist()))
+    pairs["bertscore_cxrm"] = [lookup[k] for k in zip(pairs["ref"], pairs["hyp"])]
+    del scorer
+    pairs["radcliq_v1_cxrm"] = radcliq_v1(comp or CompositeMetric(), pairs, "bertscore_cxrm")
+    print(f"[rexrank] BERTScore (CXR-Report-Metric default) done ({time.time() - t0:.0f}s)", flush=True)
     return pairs
 
 
@@ -341,6 +369,10 @@ def summarize(pairs: pd.DataFrame, llm: list[str]) -> dict:
                  "semb_score": float(lg["semb_score"].mean()),
                  "radgraph": float(lg["radgraph"].mean()),
                  "ratescore": float(lg["ratescore"].mean())}
+            if "bertscore_cxrm" in lg:
+                m["bertscore_cxrm"] = float(lg["bertscore_cxrm"].mean())
+                m["1/radcliq_v1_cxrm"] = float(1 / lg["radcliq_v1_cxrm"].mean())
+                m["radcliq_v1_cxrm"] = float(lg["radcliq_v1_cxrm"].mean())
             if level == "study":
                 for metric in llm:
                     v = lg[metric].dropna()
@@ -352,10 +384,13 @@ def summarize(pairs: pd.DataFrame, llm: list[str]) -> dict:
 
 
 def markdown_table(run: str, res: dict) -> str:
-    cols = ["1/radcliq_v1", "radcliq_v1", "bleu2", "bertscore", "semb_score", "radgraph", "ratescore", "green", "crimson"]
+    cols = ["1/radcliq_v1", "radcliq_v1", "bleu2", "bertscore", "semb_score", "radgraph", "ratescore", "green", "crimson",
+            "bertscore_cxrm", "1/radcliq_v1_cxrm"]
     lines = [f"# ReXrank-style metrics - {run}", "",
              "English translation (MedGemma-1.5-4b-it) of the Indonesian output vs. the original English reports. "
-             "Study level = one image per study (frontal first); GREEN/CRIMSON on a fixed random subset of studies.", "",
+             "Study level = one image per study (frontal first); GREEN/CRIMSON on a fixed random subset of studies. "
+             "`_cxrm`: BERTScore as CXR-Report-Metric's default config computes it (no idf), and "
+             "RadCliQ-v1 with that BERTScore.", "",
              "| test set | track | level | n | " + " | ".join(cols) + " |",
              "|" + "---|" * (4 + len(cols))]
     for split, tracks in res.items():
@@ -398,6 +433,8 @@ def main():
     if args.reuse and per_sample_path.exists():
         pairs = pd.read_parquet(per_sample_path)
         print(f"[rexrank] reusing base metrics from {per_sample_path}", flush=True)
+        if "bertscore_cxrm" not in pairs:  # written before the CXR-Report-Metric variant was added
+            pairs = add_cxrm_variant(pairs)
     else:
         pairs = base_metrics(build_pairs(df, args.calibration))
     pairs["llm_subset"] = llm_subset(pairs, args.llm_n)

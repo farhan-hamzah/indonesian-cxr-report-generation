@@ -22,9 +22,12 @@ if "--json_b" in sys.argv:
 key = ["split", "track", "image_path"]
 m = A[A.study_rep].merge(B[B.study_rep], on=key, suffixes=("_a", "_b"))
 assert (m.ref_a == m.ref_b).all(), "references differ"
-metrics = ["radgraph", "ratescore", "semb_score", "bleu2", "bertscore", "radcliq_v1"]
+metrics = [k for k in ("radgraph", "ratescore", "semb_score", "bleu2", "bertscore", "bertscore_cxrm", "radcliq_v1",
+                       "radcliq_v1_cxrm") if f"{k}_a" in m and f"{k}_b" in m]
+inverse = {k: c for k, c in (("1/radcliq", "radcliq_v1"), ("1/radcliq_cxrm", "radcliq_v1_cxrm")) if c in metrics}
 llm = [x for x in ("green", "crimson") if f"{x}_a" in m and f"{x}_b" in m]
 rng = np.random.default_rng(0)
+rng_cxrm = np.random.default_rng(1)  # own draws, so adding the _cxrm variant left the other metrics' CIs unchanged
 NB = 2000
 for split in ("test_chexpert", "test_mimic", "test_openi"):
     for track in ("findings", "impression", "findings_impression"):
@@ -33,11 +36,11 @@ for split in ("test_chexpert", "test_mimic", "test_openi"):
         if not n:
             continue
         print(f"\n=== {split} {track}  studies={n}  (A={run_a}, B={run_b})")
-        print(f"{'metric':<13} {'A':>7} {'B':>7} {'B-A':>8}  95% CI            better")
+        print(f"{'metric':<15} {'A':>7} {'B':>7} {'B-A':>8}  95% CI            better")
         idx = rng.integers(0, n, size=(NB, n))
-        for k in metrics + ["1/radcliq"] + llm:
-            if k == "1/radcliq":
-                a, b = g["radcliq_v1_a"].values, g["radcliq_v1_b"].values
+        for k in metrics + list(inverse) + llm:
+            if k in inverse:
+                a, b = g[f"{inverse[k]}_a"].values, g[f"{inverse[k]}_b"].values
                 va, vb = 1 / a.mean(), 1 / b.mean()
                 boots = 1 / b[idx].mean(1) - 1 / a[idx].mean(1)
             else:
@@ -46,14 +49,14 @@ for split in ("test_chexpert", "test_mimic", "test_openi"):
                 if not len(a):
                     continue
                 va, vb = a.mean(), b.mean()
-                ii = rng.integers(0, len(a), size=(NB, len(a)))
+                ii = (rng_cxrm if k.endswith("_cxrm") else rng).integers(0, len(a), size=(NB, len(a)))
                 boots = b[ii].mean(1) - a[ii].mean(1)
             lo, hi = np.percentile(boots, [2.5, 97.5])
-            lower_better = k == "radcliq_v1"
+            lower_better = k.startswith("radcliq_v1")
             sig = lo > 0 or hi < 0
             if sig:
                 b_wins = (vb < va) if lower_better else (vb > va)
                 win = run_b if b_wins else run_a
             else:
                 win = "tie (CI spans 0)"
-            print(f"{k:<13} {va:>7.4f} {vb:>7.4f} {vb - va:>+8.4f}  [{lo:+.4f}, {hi:+.4f}]  {win}")
+            print(f"{k:<15} {va:>7.4f} {vb:>7.4f} {vb - va:>+8.4f}  [{lo:+.4f}, {hi:+.4f}]  {win}")

@@ -19,12 +19,14 @@ for ds, split in [("MIMIC", "test_mimic"), ("IU", "test_openi"), ("CheXpert", "t
         models = [(r[1].split(" ")[0] if False else r[1], dict(zip(cols, map(f, r[2:])))) for r in rows]
         m = ours[split][track]["study"]
         print(f"\n### {ds} {track} ({len(models)} models)")
-        for c in cols:
-            if ourkey[c] not in m: continue
-            v = m[ourkey[c]]
+        # _cxrm: BERTScore as CXR-Report-Metric's default config computes it, and RadCliQ-v1 with it
+        for c, key in [(c, ourkey[c]) for c in cols] + [("BertScore", "bertscore_cxrm"), ("1/RadCliQ-v1", "1/radcliq_v1_cxrm")]:
+            if key not in m: continue
+            v = m[key]
             vals = sorted([s[c] for _, s in models if s[c] is not None], reverse=True)
             if not vals: continue
             rank = 1 + sum(x > v for x in vals)
-            print(f"  {c:<13} ours {v:.3f}  rank {rank}/{len(vals)+1}  (best {vals[0]:.3f}, median {vals[len(vals)//2]:.3f}, worst {vals[-1]:.3f})")
+            label = c + (" (cxrm)" if key.endswith("_cxrm") else "")
+            print(f"  {label:<20} ours {v:.3f}  rank {rank}/{len(vals)+1}  (best {vals[0]:.3f}, median {vals[len(vals)//2]:.3f}, worst {vals[-1]:.3f})")
         top = sorted(models, key=lambda t: -(t[1]["1/RadCliQ-v1"] or 0))
         print("  by 1/RadCliQ:", "; ".join(f"{n} {s['1/RadCliQ-v1']}" for n, s in top))
