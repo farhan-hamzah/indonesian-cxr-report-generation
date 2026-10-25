@@ -14,6 +14,7 @@ authors:
     family-names: "Wibowo"
     affiliation: "Telkom University"
 license: MIT
+doi: "10.5281/zenodo.23641847"
 repository-code: "https://github.com/farhan-hamzah/indonesian-cxr-report-generation"
 keywords:
   - radiology report generation

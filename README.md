@@ -1,5 +1,7 @@
 # Indonesian Chest X-Ray Report Generation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23641847.svg)](https://doi.org/10.5281/zenodo.23641847)
+
 Fine-tuning medical vision–language models to write chest X-ray (CXR) radiology reports in
 **Bahasa Indonesia**: the findings (*TEMUAN*) and impression (*KESAN*) sections, directly from
 the image. To our knowledge this is the first study of CXR report generation in Indonesian.
@@ -175,7 +177,8 @@ Indonesian references translated back) is computed once with `rexrank.py --calib
 
 ## Data and licences
 
-This repository contains code and aggregate results only.
+This repository contains code and aggregate results only. The code is released under the
+[MIT License](LICENSE).
 
 - **Datasets** must be obtained from their providers under their own terms:
   [MIMIC-CXR](https://physionet.org/content/mimic-cxr/) (PhysioNet credentialed access),
@@ -193,4 +196,18 @@ Thanks to [@wibotron](https://github.com/wibotron) for the help throughout this 
 
 ## Citation
 
-Paper in preparation. Please cite this repository until the paper is available.
+Paper in preparation. Until it is available, please cite the software archive on Zenodo:
+
+```bibtex
+@software{hamzah_indonesian_cxr_rrg_2026,
+  author    = {Hamzah, Farhan and Wibowo, Achmad Baihaqie},
+  title     = {Indonesian Chest X-Ray Report Generation},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23641847},
+  url       = {https://doi.org/10.5281/zenodo.23641847}
+}
+```
+
+This DOI always resolves to the latest version; each release also has its own DOI
+(v1.0.0: [10.5281/zenodo.23641848](https://doi.org/10.5281/zenodo.23641848)).

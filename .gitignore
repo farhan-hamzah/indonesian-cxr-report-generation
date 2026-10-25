@@ -4,6 +4,8 @@
 /*
 !/.gitignore
 !/README.md
+!/LICENSE
+!/CITATION.cff
 !/METODOLOGI_FINETUNING.md
 !/pyproject.toml
 !/uv.lock
